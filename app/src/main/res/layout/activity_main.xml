@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9CFCF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bmi1"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_hight"
+        android:textAlignment="center"
+        android:padding="8dp"
+        android:inputType="numberDecimal"
+        android:drawableLeft="@drawable/baseline_man_24"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your weight"
+        android:textAlignment="center"
+        android:padding="8dp"
+        android:inputType="numberDecimal"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/kg"
+        app:layout_constraintStart_toStartOf="@+id/weight"
+        app:layout_constraintTop_toTopOf="@+id/weight"
+        app:layout_constraintBottom_toBottomOf="@id/weight"
+        android:layout_margin="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:text="BMI"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="135dp"
+        android:backgroundTint="#425D6D"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+    <TextView
+        android:id="@+id/SB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI is : "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="135dp"
+        android:padding="7dp"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/btn"/>
+
+    <TextView
+        android:id="@+id/Sw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Body type "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="135dp"
+        android:padding="7dp"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/SB"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
